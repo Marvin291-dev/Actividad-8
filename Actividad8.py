@@ -37,7 +37,19 @@ if n > 0:
 else:
    print("Por favor intente de nuevo")
 
-def contar_letra(palabras, letras):
+def contar_Palabra(palabras, letras):
+    if not palabras:
+        return 0
+    elif palabras[0] == letras:
+        return 1 + contar_Palabra(palabras[1:], letras)
+    else:
+        return contar_Palabra(palabras[1:], letras)
 
+palabras = input("Ingrese una palabra: ").strip()
+letras = input("Ingrese la letras que desea contar: ").strip()
 
-
+if len(letras) != 1:
+    print("Por favor ingrese una sola letra ")
+else:
+    resultado = contar_Palabra(palabras, letras)
+    print(f"La letra '{letras}' aparece {resultado} veces en la palabra '{palabras}'.")
