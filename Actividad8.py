@@ -53,3 +53,25 @@ if len(letras) != 1:
 else:
     resultado = contar_Palabra(palabras, letras)
     print(f"La letra '{letras}' aparece {resultado} veces en la palabra '{palabras}'.")
+
+def Cadena_Texto(texto):
+    if len(texto) == 0:
+        return ""
+    else:
+        return texto[-1] + Cadena_Texto(texto[:-1])
+
+texto = input("Ingrese una cadena de texto: ")
+Invertir = Cadena_Texto(texto)
+print(f"Cadena de texto: {Invertir}")
+
+
+def potencia(base, exponente):
+    if exponente == 0:
+        return 1
+    else:
+        return base * potencia(base, exponente - 1)
+
+
+base = int(input("ingrese una base: "))
+exponente = int(input("ingrese un exponente: "))
+print(potencia(base, exponente))
