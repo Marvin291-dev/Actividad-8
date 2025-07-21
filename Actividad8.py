@@ -7,3 +7,5 @@ def factorial(n):
 
 n = int(input("Ingrese un numero entero positivo: "))
 print(factorial(n))
+
+def Suma():
