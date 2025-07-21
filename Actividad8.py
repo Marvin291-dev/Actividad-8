@@ -37,6 +37,21 @@ if n > 0:
 else:
    print("Por favor intente de nuevo")
 
-   def Palabra(n):
+   def contar_Palabra(palabra, letra, n=0):
+       if n == len(palabra):
+           return 0
+       if palabra[n] == letra:
+           return n(palabra, letra, n + 1) + 1
+       else:
+           return contar_Palabra(palabra, letra, n + 1)
+
+
+   palabra = input("Ingrese una frase: ")
+   letra = input("Ingrese una letra para contar: ")
+   if len(letra) != 1:
+       print("Por favor ingresa una letra: ")
+   else:
+       cantidad = contar_Palabra(palabra, letra)
+       print(f"la letra {letra} aparece {cantidad} veces en la frase: {palabra}.")
 
 
