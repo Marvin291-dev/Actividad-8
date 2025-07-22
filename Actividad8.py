@@ -1,5 +1,5 @@
 while True:
-        print("\n🎯 MENÚ DE OPCIONES")
+        print("MENÚ DE OPCIONES")
         print("1. Factorial")
         print("2. Suma")
         print("3. Fibonacci")
@@ -99,4 +99,4 @@ while True:
                 case _:
                     print("Opción fuera de rango. Intenta nuevamente.")
         except ValueError:
-                     print("❌ Entrada inválida. Por favor ingresa un número entre 1 y 7.")
+                     print("Entrada inválida. Por favor ingresa un número entre 1 y 7.")
